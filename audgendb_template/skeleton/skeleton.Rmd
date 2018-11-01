@@ -1,0 +1,108 @@
+---
+title: "`r (doc_title <- 'Add Title Here')`"
+author: " `r ifelse(grepl('ebciii3', getwd()), 'E Bryan Crenshaw III', 'AudGenDB Team')` "
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output: 
+  html_document:
+    theme: spacelab
+    highlight: default
+    toc: TRUE
+    toc_depth: 5
+    toc_float: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+### Objective ### 
+Briefly describe the goal of this document.
+
+### Approach ### 
+Give a step by step overview of the approach.
+
+```{r LoadLibraries}
+#Load libraries in this first chunk
+suppressPackageStartupMessages(library(dplyr)) 
+library(ggplot2)
+
+# Load external R scripts here
+# How to embed in R Markdown: < https://yihui.name/knitr/demo/externalization/ >
+#knitr::read_chunk('../functions/grepl_pattern2institution.R')
+```
+
+```{r LoadData, cache=FALSE}
+#Load data in this chunk
+input_file      <- "data/garbage_in.csv"
+# output_filename <- "output/garbage_out"
+# output_file_ext <- ".csv"
+# output_file     <- paste0(output_filename,output_file_ext)
+# metadata_file    <- paste0(output_filename,".txt")
+# code_file       <- "data/codes/diagnosis_codes.csv"
+pathname        <- "/Users/ebciii3/Public/AudGenDB Data Mining/Data Loading and DQA/"
+# Note that 'doc_title' is set in the title section of the YAML header
+
+```
+
+```{r grepl_pattern2institution, eval=FALSE}
+# Use when you want to include an external R script, but must make 3 changes to activate:
+# 1) Uncomment knitr::readchunk() in first chunk, and add the path and file name to be included
+# 2) Change the name of this chunk from 'uniq_len' to the name of your R script file
+# 3) Take out 'eval=FALSE' from this chunk or change to 'TRUE'
+# 4) Make sure that the external script has < # ------- correct_script_name > at top
+
+```
+
+
+###Data Analysis### {#basic_stats}
+
+```{r AnalyzeData}
+# Undertake basic stats of data in this chunk
+
+```
+
+
+```{r OutputData, echo=FALSE}
+# Use this chunk to print output csv file and to generate a metadata file for the output:
+# To use following lines, select them, and uncomment with 'Ctrl'+'Shift'+'C' in RStudio
+
+# df_out <- DF_TO_OUTPUT_HERE
+# meta_comment <- c("ADD SHORT COMMENT FOR PURPOSE OF OUTPUT FILE")
+# 
+# fileConn<-file(metadata_file)
+# writeLines(c(output_file,"is the output file generated in R Markdown file, entitled:",
+#             "\n",
+#             doc_title, "\n",
+#            "Input file was:", input_file, "\n",
+#            "Comment: ", meta_comment, "\n",
+#            "Document Generated on: ", format(Sys.time(), "%a %b %d, %Y  %X"), "\n"
+#            ),
+#             fileConn)
+# close(fileConn)
+# 
+# write.csv(df_out, file=output_file, row.names = FALSE)
+```
+
+###Conclusion### {#conclusion}  
+
+Summarize data here.
+
+<br /><br />
+<details>
+<summary>Click here for session info.</summary>
+
+```{r SessionInfo}
+# This session info field shows the environment when the R script was run
+# It will be hidden in documents, except for the summary above and a triangle
+# Clicking on the triangle/summary statement will reveal these data in the browser
+sessionInfo()
+print(paste0("This R Markdown Document was run on ",format(Sys.Date(),"%d-%b-%Y")))
+
+# If the user in not inside RStudio, then this will send a notification to the OS 
+require(notifier)
+msg <- paste0(doc_title, " is done!")
+notifier::notify(msg, title = "R notification", image = NULL)
+```
+
+</details>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

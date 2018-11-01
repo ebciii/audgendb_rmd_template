@@ -1,0 +1,14 @@
+# R Hidden Files
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# Mac OS
+.DS_Store
+
+# Subfolders with info
+pre-git\ versions/*
+
+# Individual Files
+Rmarkdown document Template HowTo private.txt

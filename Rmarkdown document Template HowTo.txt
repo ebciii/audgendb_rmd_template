@@ -1,0 +1,23 @@
+To make a template, the instructions are given in this URL:
+
+https://bookdown.org/yihui/rmarkdown/document-templates.html
+
+To find the examples on this machine, I ran in the 'Terminal' of Mac OS X the following command:
+
+At the prompt:
+bs-retina:~ ebciii3$ 
+
+Command was:
+find / -name "skeleton.Rmd"
+
+
+Note: These hidden files can be found by opening them with TextWrangler, which allows you to see hidden files easily. 
+
+
+Additional info on building templates can be found:
+https://bookdown.org/yihui/rmarkdown/html-document.html
+
+RStudio instructions on using templates for html files:
+https://rmarkdown.rstudio.com/developer_document_templates
+
+ 
