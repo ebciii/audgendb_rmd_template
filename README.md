@@ -3,28 +3,43 @@
 *Date:* 16-Sep-2015 (Last modified 26-Oct-2018)  
 *Author:* E. Bryan Crenshaw III, PhD  
 
-#### Description: ####
+** Description: ** R Markdown Template for use on the Audiological and Genetic Database (AudGenDB) Project.
 
 **Contents:** This folder contains 2 files in addition to this README.md file:
 
 - The 'Rmarkdown document Template HowTo.txt' file
 - The 'audgendb_template' folder.
 
-The txt file will give links to support pages in R Markdown explaining how to make and use templates.  The folder is ready to place in the template folder for your computer system.   
+The txt file will give links to support pages in explaining how to make and use templates.  The folder is ready to place in the template folder for your computer system.   
 
 **Implementation:** The folder 'audgendb_template' should be copied to the Template directory for R on your computer.
 
 The files/subfolder structure must be maintained for the template to work.
 
-The 'template.yml' is written in the YAML markdown language, and provides metadata for the template.
+The `template.yml` is written in the YAML markdown language, and provides metadata for the template.
 
-The 'skeleton.Rmd' file contains the R Markdown for the template. It must reside in the skeleton subfolder to work properly
+The `skeleton.Rmd` file contains the R Markdown for the template. It must reside in the skeleton subfolder to work properly
 
 Added on 29-Nov-2017 (Updated 30-Sep-2018)  
 Template folder on Mac OS X using R version 3.5:
 /Library/Frameworks/R.framework/Versions/3.5/Resources/library/rmarkdown/rmarkdown/templates
 
 *NOTE: only put the skeleton.Rmd file in the skeleton folder or RStudio will make a new directory for each page*
+
+##### Features #####
+- YAML Header Features (Header delimited above and below with `---`)
+  - `title:` uses `doc_title` variable to capture the page title for use below
+  - `author:` uses the working directory in an `ifelse` query for the user (in Mac OS X)
+  - `date:` automatically inserts date
+  - `output:` sets up theme, and makes a table of contents based on headers in markdown below
+- R Markdown Body
+  - `setup` chunk needed to import R scripts into file
+  - `LoadLibraries` chunk for including packages and R scripts (see link for loading R scripts)
+  - `LoadData` designed to read csv files, and capture file names in one place
+  - Several standard chunks set up with headers, which will get incorporated into the table of contents automatically
+  - `OutputData` designed to output data, and to generate a metadata file with information on source and purpose of output file
+  - `SessionInfo` chunk saves technical information about the environment in which the file was run, which is hidden on the output using the html `detail` tag. Saving this information is good practice, but clutters the output, so it is hidden until detail summary is clicked on.  
+  - The `notifier` package is used to send a message to the operating system when the file is done, if the user is not in the RStudio environment (Useful for long runs where folks are working on something else waiting for the script to run).
 
 ##### Further Reading #####
 - ["Efficient Input/Output" from *Efficient R programming* ](https://bookdown.org/csgillespie/efficientR/input-output.html)
