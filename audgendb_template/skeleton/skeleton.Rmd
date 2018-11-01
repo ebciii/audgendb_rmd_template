@@ -23,25 +23,42 @@ Give a step by step overview of the approach.
 
 ```{r LoadLibraries}
 #Load libraries in this first chunk
+library(data.table)
 suppressPackageStartupMessages(library(dplyr)) 
 library(ggplot2)
+library(readr)
 
 # Load external R scripts here
 # How to embed in R Markdown: < https://yihui.name/knitr/demo/externalization/ >
-#knitr::read_chunk('../functions/grepl_pattern2institution.R')
+# knitr::read_chunk('../functions/grepl_pattern2institution.R')
 ```
 
 ```{r LoadData, cache=FALSE}
 #Load data in this chunk
+
+#### Input File Names
 input_file      <- "data/garbage_in.csv"
+
+#### Output File Names
 # output_filename <- "output/garbage_out"
 # output_file_ext <- ".csv"
 # output_file     <- paste0(output_filename,output_file_ext)
 # metadata_file    <- paste0(output_filename,".txt")
 # code_file       <- "data/codes/diagnosis_codes.csv"
-pathname        <- "/Users/ebciii3/Public/AudGenDB Data Mining/Data Loading and DQA/"
+#pathname        <- "/Users/USERNAME/" # Mac OS X format
 # Note that 'doc_title' is set in the title section of the YAML header
 
+### Data Input
+# Most data in the project comes in csv files, and the two ways we use to input are below
+# fread() is from the data.table package; it is the fastest, although date-time formats can have issues
+#    Does a better job of deciding on column data type in sparse data conditions
+# read_csv() is in readr package: slower, but data types can be controlled using cols() function 
+#     Examines first 100 lines to decide on data type, and can make mistakes on sparse data
+#     col() statement is printed out when first used, and this can be modified and inserted above
+
+# Uncomment to choose input function 
+# df_in <- fread(input_file)
+# df_in <- read_csv(input_file)) # , col_types = input_col_types # specify input_col_types above 
 ```
 
 ```{r grepl_pattern2institution, eval=FALSE}
@@ -54,7 +71,7 @@ pathname        <- "/Users/ebciii3/Public/AudGenDB Data Mining/Data Loading and 
 ```
 
 
-###Data Analysis### {#basic_stats}
+###Data Analysis### 
 
 ```{r AnalyzeData}
 # Undertake basic stats of data in this chunk
@@ -83,7 +100,7 @@ pathname        <- "/Users/ebciii3/Public/AudGenDB Data Mining/Data Loading and 
 # write.csv(df_out, file=output_file, row.names = FALSE)
 ```
 
-###Conclusion### {#conclusion}  
+###Conclusion###   
 
 Summarize data here.
 
