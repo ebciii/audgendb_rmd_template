@@ -3,7 +3,7 @@
 *Date:* 16-Sep-2015 (Last modified 26-Oct-2018)  
 *Author:* E. Bryan Crenshaw III, PhD  
 
-** Description: ** R Markdown Template for use on the Audiological and Genetic Database (AudGenDB) Project.
+**Description:** R Markdown Template for use on the Audiological and Genetic Database (AudGenDB) Project.
 
 **Contents:** This folder contains 2 files in addition to this README.md file:
 
@@ -42,4 +42,4 @@ Template folder on Mac OS X using R version 3.5:
   - The `notifier` package is used to send a message to the operating system when the file is done, if the user is not in the RStudio environment (Useful for long runs where folks are working on something else waiting for the script to run).
 
 ##### Further Reading #####
-- ["Efficient Input/Output" from *Efficient R programming* ](https://bookdown.org/csgillespie/efficientR/input-output.html)
+- ["Efficient Input/Output" chapter from *Efficient R programming* ](https://bookdown.org/csgillespie/efficientR/input-output.html) - More info on utility of `readr` versus `data.table` package functions.
