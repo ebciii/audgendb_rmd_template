@@ -4,6 +4,9 @@
 .RData
 .Ruserdata
 
+# R Files
+AudGenDB  RMarkdown Template.Rproj
+
 # Mac OS
 .DS_Store
 
