@@ -27,10 +27,27 @@ library(data.table)
 suppressPackageStartupMessages(library(dplyr)) 
 library(ggplot2)
 library(readr)
+# library(knitr)
+# library(kableExtra)
 
 # Load external R scripts here
 # How to embed in R Markdown: < https://yihui.name/knitr/demo/externalization/ >
 # knitr::read_chunk('../functions/grepl_pattern2institution.R')
+# knitr::read_chunk('../functions/kable_smalldf_left.R')
+```
+
+```{r grepl_pattern2institution, eval=FALSE}
+# Use when you want to include an external R script, but must make 3 changes to activate:
+# 1) Uncomment knitr::readchunk() in first chunk, and add the path and file name to be included
+# 2) Change the name of this chunk from 'uniq_len' to the name of your R script file
+# 3) Take out 'eval=FALSE' from this chunk or change to 'TRUE'
+# 4) Make sure that the external script has < # ------- correct_script_name > at top
+# 5) Place the function's R script in a `functions` folder in your main R directory (ebcii3's main R directory in the folder above this project folder) 
+
+```
+
+```{r kable_smalldf_left}
+# This function makes it easy to add well formatted small tables that float left on the R Markdown page
 ```
 
 ```{r LoadData, cache=FALSE}
@@ -40,10 +57,12 @@ library(readr)
 input_file      <- "data/garbage_in.csv"
 
 #### Output File Names
+# Uncomment next 4 lines for output (select lines and Shift-Ctrl-C) 
 # output_filename <- "output/garbage_out"
 # output_file_ext <- ".csv"
 # output_file     <- paste0(output_filename,output_file_ext)
 # metadata_file    <- paste0(output_filename,".txt")
+
 # code_file       <- "data/codes/diagnosis_codes.csv"
 #pathname        <- "/Users/USERNAME/" # Mac OS X format
 # Note that 'doc_title' is set in the title section of the YAML header
@@ -60,16 +79,6 @@ input_file      <- "data/garbage_in.csv"
 # df_in <- fread(input_file)
 # df_in <- read_csv(input_file)) # , col_types = input_col_types # specify input_col_types above 
 ```
-
-```{r grepl_pattern2institution, eval=FALSE}
-# Use when you want to include an external R script, but must make 3 changes to activate:
-# 1) Uncomment knitr::readchunk() in first chunk, and add the path and file name to be included
-# 2) Change the name of this chunk from 'uniq_len' to the name of your R script file
-# 3) Take out 'eval=FALSE' from this chunk or change to 'TRUE'
-# 4) Make sure that the external script has < # ------- correct_script_name > at top
-
-```
-
 
 ###Data Analysis### 
 
