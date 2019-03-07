@@ -1,18 +1,19 @@
 ### AudGenDB Template for R Markdown ###
 
-*Date:* 16-Sep-2015 (Last modified 26-Oct-2018)  
+*Date:* 16-Sep-2015 (Last modified 06-Mar-2019)  
 *Author:* E. Bryan Crenshaw III, PhD  
 
 **Description:** R Markdown Template for use on the Audiological and Genetic Database (AudGenDB) Project.
 
-**Contents:** This folder contains 2 files in addition to this README.md file:
+**Contents:** This folder contains 3 files in addition to this README.md file:
 
 - The 'Rmarkdown document Template HowTo.txt' file
 - The 'audgendb_template' folder.
+- The 'LoadAudGenDB_Rmarkdown_Template.Rmd' file, which contains a `bash` script to load the template.
 
 The txt file will give links to support pages in explaining how to make and use templates.  The folder is ready to place in the template folder for your computer system.   
 
-**Implementation:** The folder 'audgendb_template' should be copied to the Template directory for R on your computer.
+**Implementation:** The folder 'audgendb_template' should be copied to the Template directory for R on your computer. Alternatively, use the 'LoadAudGenDB_Rmarkdown_Template.Rmd' file that contains a `bash` script that will run in R Studio.
 
 The files/subfolder structure must be maintained for the template to work.
 
@@ -20,9 +21,9 @@ The `template.yml` is written in the YAML markdown language, and provides metada
 
 The `skeleton.Rmd` file contains the R Markdown for the template. It must reside in the skeleton subfolder to work properly
 
-Added on 29-Nov-2017 (Updated 30-Sep-2018)  
-Template folder on Mac OS X using R version 3.5:
-/Library/Frameworks/R.framework/Versions/3.5/Resources/library/rmarkdown/rmarkdown/templates
+Added on 29-Nov-2017 (Updated 30-Sep-2018 & 07-03-2019)  
+Template folder on Mac OS X using Current R version:
+/Library/Frameworks/R.framework/Versions/Current/Resources/library/rmarkdown/rmarkdown/templates
 
 *NOTE: only put the skeleton.Rmd file in the skeleton folder or RStudio will make a new directory for each page*
 

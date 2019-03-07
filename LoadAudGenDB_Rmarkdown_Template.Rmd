@@ -1,0 +1,25 @@
+---
+title: "Load AudGenDB Template - Mac OS X"
+output: html_document
+---
+
+#### Loading AudGenDB Template ####
+
+1. Place the 'audgendb_template' folder into your 'Documents' folder on Mac OS X (don't place it into a subfolder or the script won't work).  
+2. Open the R Markdown file, 'LoadAudGenDB_Rmarkdown_Template.Rmd', in RStudio. 
+3. Knit the document using the icon at the top of this panel with yarn and knitting needle followed by "Knit". 
+4. Look at the output below, and it should be a directory listing that includes the 'audgendb_template' folder. 
+5. Contact Bryan, if this doesn't work. 
+
+```{bash}
+#!/bin/bash
+
+# This bash script is used load AudGenDB R Markdown template to R Studio 
+# See script tutorial for insights at https://linuxconfig.org/bash-scripting-tutorial-for-beginners
+
+md_folder=/Library/Frameworks/R.framework/Versions/Current/Resources/library/rmarkdown/rmarkdown/templates/
+cp -a ~/Documents/audgendb_template/. ${md_folder}/audgendb_template
+cd $md_folder
+ls -al
+```
+
