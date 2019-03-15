@@ -92,7 +92,7 @@ input_file      <- "data/garbage_in.csv"
 # Use this chunk to print output csv file and to generate a metadata file for the output:
 # To use following lines, select them, and uncomment with 'Ctrl'+'Shift'+'C' in RStudio
 
-# df_out <- DF_TO_OUTPUT_HERE
+# df_out <- DATA_FRAME_TO_OUTPUT_HERE
 # meta_comment <- c("ADD SHORT COMMENT FOR PURPOSE OF OUTPUT FILE")
 # 
 # fileConn<-file(metadata_file)
@@ -125,6 +125,11 @@ sessionInfo()
 print(paste0("This R Markdown Document was run on ",format(Sys.Date(),"%d-%b-%Y")))
 
 # If the user in not inside RStudio, then this will send a notification to the OS 
+# NOTE: Notifier was not on CRAN in March 2019
+# To get package: 
+#install.packages("devtools") if devtools is not installed
+#devtools::install_github("gaborcsardi/notifier")
+################################################
 require(notifier)
 msg <- paste0(doc_title, " is done!")
 notifier::notify(msg, title = "R notification", image = NULL)
