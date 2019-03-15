@@ -9,7 +9,7 @@
 
 - The 'Rmarkdown document Template HowTo.txt' file
 - The 'audgendb_template' folder.
-- The 'LoadAudGenDB_Rmarkdown_Template.Rmd' file, which contains a `bash` script to load the template.
+- The 'LoadAudGenDB_Rmarkdown_Template.Rmd' file, which contains a `bash` script that can be run in RStudio to load the template.
 
 The txt file will give links to support pages in explaining how to make and use templates.  The folder is ready to place in the template folder for your computer system.   
 
