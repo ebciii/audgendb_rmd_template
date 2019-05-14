@@ -27,6 +27,7 @@ library(data.table)
 suppressPackageStartupMessages(library(dplyr)) 
 library(ggplot2)
 library(readr)
+library(yaml)
 # library(knitr)
 # library(kableExtra)
 
@@ -95,16 +96,14 @@ input_file      <- "data/garbage_in.csv"
 # df_out <- DATA_FRAME_TO_OUTPUT_HERE
 # meta_comment <- c("ADD SHORT COMMENT FOR PURPOSE OF OUTPUT FILE")
 # 
-# fileConn<-file(metadata_file)
-# writeLines(c(output_file,"is the output file generated in R Markdown file, entitled:",
-#             "\n",
-#             doc_title, "\n",
-#            "Input file was:", input_file, "\n",
-#            "Comment: ", meta_comment, "\n",
-#            "Document Generated on: ", format(Sys.time(), "%a %b %d, %Y  %X"), "\n"
-#            ),
-#             fileConn)
-# close(fileConn)
+# yml_out <- list(
+#     Name = output_file,
+#     Source = doc_title,
+#     Input = input_file,
+#     Description = meta_comment,
+#     Date_Generated = format(Sys.time(), "%a %b %d, %Y  %X")
+# )
+# write_yaml(yml_out, file = metadata_file)
 # 
 # write.csv(df_out, file=output_file, row.names = FALSE)
 ```
