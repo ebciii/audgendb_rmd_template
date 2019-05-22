@@ -5,6 +5,19 @@
 
 **Description:** R Markdown Template for use on the Audiological and Genetic Database (AudGenDB) Project.
 
+### Dependencies
+- [RStudio](https://www.rstudio.com/)
+- knitr package, and its dependencies from [CRAN resource](https://cran.r-project.org/) to generate HTML pages.
+- Other Packages Used
+  - data.table
+  - dplyr
+  - ggplot2
+  - kableExtra
+  - notifier (see template comments for instructions on downloading package, which isn't in CRAN)
+  - readr
+  - yaml
+
+
 **Contents:** This folder contains 3 files in addition to this README.md file:
 
 - The 'Rmarkdown document Template HowTo.txt' file
