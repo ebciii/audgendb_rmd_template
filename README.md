@@ -34,9 +34,10 @@ The `template.yml` is written in the YAML markdown language, and provides metada
 
 The `skeleton.Rmd` file contains the R Markdown for the template. It must reside in the skeleton subfolder to work properly
 
-Added on 29-Nov-2017 (Updated 30-Sep-2018 & 07-03-2019)  
 Template folder on Mac OS X using Current R version:
 /Library/Frameworks/R.framework/Versions/Current/Resources/library/rmarkdown/rmarkdown/templates
+
+Version numbering complies with the [Semantic Versioning 2.0.0 requirements](https://semver.org/).
 
 *NOTE: only put the skeleton.Rmd file in the skeleton folder or RStudio will make a new directory for each page*
 
