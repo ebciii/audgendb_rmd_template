@@ -18,3 +18,4 @@ pre-git\ versions/*
 # Individual Files
 Rmarkdown document Template HowTo private.txt
 README.html
+README.md.html
