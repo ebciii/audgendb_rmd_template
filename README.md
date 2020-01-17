@@ -1,6 +1,5 @@
 ### AudGenDB Template for R Markdown ###
 
-*Date:* 16-Sep-2015 (Last modified 17-May-2019)  
 *Author:* E. Bryan Crenshaw III, PhD  
 
 **Description:** R Markdown Template for use on the Audiological and Genetic Database (AudGenDB) Project.
@@ -48,7 +47,7 @@ Version numbering complies with the [Semantic Versioning 2.0.0 requirements](htt
   - `date:` automatically inserts date
   - `output:` sets up theme, and makes a table of contents based on headers in markdown below
 - R Markdown Body
-  - `setup` chunk needed to import R scripts into file
+  - `setup` chunk needed to import R scripts into file. **Template designed to reside in an rmarkdown subfolder to better organize projects. See comments in this chunk, if Rmd file is placed in main project directory.**
   - `LoadLibraries` chunk for including packages and R scripts (see link for loading R scripts)
   - `LoadData` designed to read csv files, and capture file names in one place
   - Several standard chunks set up with headers, which will get incorporated into the table of contents automatically
