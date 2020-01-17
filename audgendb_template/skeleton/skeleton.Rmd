@@ -13,6 +13,10 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+# In AudGenDB, the default organization is for .Rmd files to reside in the 'rmarkdown' subfolder
+# Comment this next line out (or delete), if you're Rmd resides in the main directory
+knitr::opts_knit$set(root.dir = "..") 
+
 ```
 
 ### Objective ### 
@@ -106,6 +110,7 @@ input_file      <- "data/garbage_in.csv"
 # write_yaml(yml_out, file = metadata_file)
 # 
 # write.csv(df_out, file=output_file, row.names = FALSE)
+
 ```
 
 ###Conclusion###   
