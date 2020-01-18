@@ -17,9 +17,11 @@ straightforward as possible.
 ### Changed
 
 - In the setup chunk, added a `knitr` command to point to the directory above the folder in which the .Rmd file resides. This is designed so that all of the .Rmd files can reside in an `rmarkdown` folder (or any folder one cares to name it), but the `knitr` command functions as if the .Rmd file is located in the main project folder. This is useful to easy access folders that are routinely called in the .Rmd files, such as `data` for input or `html` where the finished R Markdown reports can reside. 
+- removed out of date grepl_pattern2institution.rtf
  
 ### Fixed
 
+- [New verstions of knitr require that markdown headers spaced from # header syntax - Issue #3](https://github.com/ebciii/audgendb_rmd_template/issues/3)  - Add spaces to all headers in the template. 
 - Updated README.md text to reflect changes
  
 ## [0.3] - 2019-05-22

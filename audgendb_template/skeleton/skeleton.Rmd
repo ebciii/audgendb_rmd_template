@@ -85,7 +85,7 @@ input_file      <- "data/garbage_in.csv"
 # df_in <- read_csv(input_file)) # , col_types = input_col_types # specify input_col_types above 
 ```
 
-###Data Analysis### 
+### Data Analysis ### 
 
 ```{r AnalyzeData}
 # Undertake basic stats of data in this chunk
@@ -113,7 +113,7 @@ input_file      <- "data/garbage_in.csv"
 
 ```
 
-###Conclusion###   
+### Conclusion ###   
 
 Summarize data here.
 
